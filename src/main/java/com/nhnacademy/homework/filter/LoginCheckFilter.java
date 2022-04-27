@@ -1,4 +1,4 @@
-package com.nhnacademy.homework;
+package com.nhnacademy.homework.filter;
 
 import java.io.IOException;
 import java.util.ArrayList;
