@@ -1,14 +1,11 @@
 package com.nhnacademy.homework;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class Food {
     String name;
     String cost;
-    String quantity;
+    int quantity;
 
-    public Food(String name, String cost, String quantity) {
+    public Food(String name, String cost, int quantity) {
         this.name = name;
         this.cost = cost;
         this.quantity = quantity;
@@ -22,7 +19,7 @@ public class Food {
         return cost;
     }
 
-    public String getQuantity() {
+    public int getQuantity() {
         return quantity;
     }
 

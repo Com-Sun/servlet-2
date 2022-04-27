@@ -19,10 +19,10 @@ public class WebAppInitializer implements ServletContainerInitializer {
     @Override
     public void onStartup(Set<Class<?>> set, ServletContext servletContext)
         throws ServletException {
-        Food onion = new Food("양파", "1000", "2");
-        Food egg = new Food("게란", "2000", "5");
-        Food pa = new Food("파", "500", "10");
-        Food apple = new Food("사과", "2000", "20");
+        Food onion = new Food("양파", "1000", 2);
+        Food egg = new Food("게란", "2000", 5);
+        Food pa = new Food("파", "500", 10);
+        Food apple = new Food("사과", "2000", 20);
 
         FoodStand foodStand = new FoodStand();
         foodStand.add(onion);

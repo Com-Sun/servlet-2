@@ -21,11 +21,11 @@ import lombok.extern.slf4j.Slf4j;
 
 
 @WebFilter(filterName = "loginCheckFilter", urlPatterns = "/*", initParams = {
-    @WebInitParam(name = "blacklist", value = "/\n"
-        + "/foods\n"
-        + "/cart\n"
-        + "login\n"
-        + "login.html"
+    @WebInitParam(name = "blacklist", value =
+        "/foods\n"
+            + "/cart\n"
+            + "login\n"
+            + "login.html"
     )
 })
 @Slf4j
@@ -46,10 +46,10 @@ public class LoginCheckFilter implements Filter {
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse,
                          FilterChain filterChain) throws IOException, ServletException {
 
-       String requestUri = ((HttpServletRequest) servletRequest).getRequestURI();
+        String requestUri = ((HttpServletRequest) servletRequest).getRequestURI();
 
         if (!urls.contains(requestUri)) {
-            filterChain.doFilter(servletRequest,servletResponse);
+            filterChain.doFilter(servletRequest, servletResponse);
         } else {
             HttpSession session = ((HttpServletRequest) servletRequest).getSession(false);
             if (Objects.isNull(session)) {
